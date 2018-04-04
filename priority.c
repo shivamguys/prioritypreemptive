@@ -111,25 +111,6 @@ void clone(struct process p[],struct process q[],int n)
         q[i]=p[i];
     }
 }
-
-void calculatenextmintime(struct process p[],int n)
-{
- minindex=1;  
- 
-   minimumburst=p[1].bursttime;
- for(int i=2;i<=n;i++)
- {
-     if(p[i].bursttime<minimumburst)
-     {
-     
-         minimumburst=p[i].bursttime;
-     minindex=i;
-         
-    }
-     
- }
-    
-}
 void decrement(struct process p[],int currently,int previous,int totalp)
 {
  
