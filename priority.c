@@ -327,13 +327,13 @@ void print(struct process p[],int n)
  for(int i=0;i<n;i++)
  {
      cout<<"\n\n";
-     cout<<"  Process no  "<<p[i].processno<<"\n";
-     cout<<"  Burst time  "<<p[i].bursttime<<"\n";
-     cout<<"  Priority is "<<p[i].priority<<"\n";
-    cout<<" Process  Start time  is  "<<p[i].start<<"\n";
-    cout<<" Process End Time Is  "<<p[i].end<<"\n";
-    cout<<" Turn Around time is  "<<p[i].turnaroundtime<<"\n";
-    cout<<" Waiting Time is  "<<p[i].waitingtime<<"\n";
+     cout<<"  Process no  -> "<<p[i].processno<<"\n";
+     cout<<"  Burst time  -> "<<p[i].bursttime<<"\n";
+     cout<<"  Priority is -> "<<p[i].priority<<"\n";
+    cout<<" Process  Start time  is  -> "<<p[i].start<<"\n";
+    cout<<" Process End Time Is  -> "<<p[i].end<<"\n";
+    cout<<" Turn Around time is  -> "<<p[i].turnaroundtime<<"\n";
+    cout<<" Waiting Time is  -> "<<p[i].waitingtime<<"\n";
      
 }
 }
