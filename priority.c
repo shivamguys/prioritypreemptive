@@ -1,6 +1,5 @@
 #include<stdio.h>
-#include<pthread.h>
-#include<semaphore.h>
+
 #include<iostream>
 
 using namespace std;
@@ -111,6 +110,25 @@ void clone(struct process p[],struct process q[],int n)
         q[i]=p[i];
     }
 }
+/*
+void calculatenextmintime(struct process p[],int n)
+{
+ minindex=1;  
+ 
+   minimumburst=p[1].bursttime;
+ for(int i=2;i<=n;i++)
+ {
+     if(p[i].bursttime<minimumburst)
+     {
+     
+         minimumburst=p[i].bursttime;
+     minindex=i;
+         
+    }
+     
+ }
+    
+}*/
 void decrement(struct process p[],int currently,int previous,int totalp)
 {
  
@@ -305,17 +323,18 @@ bool check(struct process p[],int total,int currently)
 void print(struct process p[],int n)
 {
     
+     cout<<"|| Process no || Burst time ||  Priority || Process  Start time ||Process End Time||Turn Aroundtime||Waiting Time\n\n";
  for(int i=0;i<n;i++)
  {
      cout<<"\n\n";
-     cout<<"  Process no  -> "<<p[i].processno<<"\n";
-     cout<<"  Burst time  -> "<<p[i].bursttime<<"\n";
-     cout<<"  Priority is -> "<<p[i].priority<<"\n";
-    cout<<" Process  Start time  is  -> "<<p[i].start<<"\n";
-    cout<<" Process End Time Is  -> "<<p[i].end<<"\n";
-    cout<<" Turn Around time is  -> "<<p[i].turnaroundtime<<"\n";
-    cout<<" Waiting Time is  -> "<<p[i].waitingtime<<"\n";
-     
+    cout<<"\t"<<p[i].processno+1<<"\t";
+     cout<<"\t"<<p[i].bursttime<<"\t";
+     cout<<"\t"<<p[i].priority<<"\t";
+    cout<<"\t"<<p[i].start<<"\t";
+    cout<<"\t"<<p[i].end<<"\t";
+    cout<<"\t"<<p[i].turnaroundtime<<"\t";
+    cout<<"\t"<<p[i].waitingtime<<"\t";
+    
 }
 }
         
@@ -341,7 +360,7 @@ main()
  // calculatetime(p,t,n);
  //   print(t,n);
 //print(q,n);
-    
+    cout<<"\n";
  
 }
 
